@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall / Bazar - Premium Shopping Hub</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <i class="fa-solid fa-bag-shopping"></i> Mall / <span>Bazar</span>
+            </a>
+            
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search electronics, fashion, groceries...">
+            </div>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <span class="hero-tag">Mega Shopping Festival</span>
+            <h1>Welcome to Mall / Bazar</h1>
+            <p>Discover top deals on Fashion, Electronics, Smart Accessories, and Daily Essentials.</p>
+            <a href="#productsSection" class="btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+        
+        <!-- Category Filters -->
+        <div class="category-wrapper">
+            <h2 class="section-title">Explore Categories</h2>
+            <div class="category-buttons" id="categoryContainer">
+                <button class="cat-btn active" data-category="All">All Items</button>
+                <button class="cat-btn" data-category="Electronics">Electronics</button>
+                <button class="cat-btn" data-category="Fashion">Fashion</button>
+                <button class="cat-btn" data-category="Footwear">Footwear</button>
+                <button class="cat-btn" data-category="Accessories">Accessories</button>
+            </div>
+        </div>
+
+        <!-- Products Grid Section -->
+        <section id="productsSection" class="products-section">
+            <h2 class="section-title">Trending Products</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Dynamic products will be rendered via JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Slide-in Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Your Shopping Cart</h3>
+            <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+        </div>
+        
+        <div class="cart-body" id="cartItemsContainer">
+            <!-- Cart Items rendered dynamically -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total Amount:</span>
+                <span class="total-price" id="cartTotal">₹0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout <i class="fa-solid fa-lock"></i>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">Product added to cart!</div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Mall / Bazar. Created for Web Development & GitHub Showcase.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
